@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timeboxing Planner</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="planner-container">
+    <div class="header">
+      <h1 id="title">DAILY TIMEBOXING PLANNER</h1>
+      <div class="date-section">
+        <label id="date-label" for="date">DATE :</label>
+        <input type="date" id="date" name="date">
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="left-section">
+        <div class="top-priorities">
+          <h2 id="top-priorities-title">TOP PRIORITIES :</h2>
+          <textarea id="top-priorities" rows="3" placeholder="Enter your top priorities here..."></textarea>
+        </div>
+
+        <div class="brain-dump">
+          <h2 id="brain-dump-title">BRAIN DUMP</h2>
+          <textarea id="brain-dump" rows="15" placeholder="Write down any other thoughts or tasks here..."></textarea>
+        </div>
+      </div>
+
+      <div class="right-section">
+        <div class="time-table">
+          <table id="task-table">
+            <thead>
+              <tr>
+                <th id="time-column">Time</th>
+                <th id="task-column">Task</th>
+                <th id="done-column">Done</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Time slots from 7:00 AM to 11:00 PM (one-hour increments) -->
+              <tr><td>7:00</td><td><input type="text" id="task-7" placeholder="Enter task"></td><td><input type="checkbox" class="task-done" data-task="7"></td></tr>
+              <tr><td>8:00</td><td><input type="text" id="task-8" placeholder="Enter task"></td><td><input type="checkbox" class="task-done" data-task="8"></td></tr>
+              <tr><td>9:00</td><td><input type="text" id="task-9" placeholder="Enter task"></td><td><input type="checkbox" class="task-done" data-task="9"></td></tr>
+              <tr><td>10:00</td><td><input type="text" id="task-10" placeholder="Enter task"></td><td><input type="checkbox" class="task-done" data-task="10"></td></tr>
+              <tr><td>11:00</td><td><input type="text" id="task-11" placeholder="Enter task"></td><td><input type="checkbox" class="task-done" data-task="11"></td></tr>
+              <tr><td>12:00</td><td><input type="text" id="task-12" placeholder="Enter task"></td><td><input type="checkbox" class="task-done" data-task="12"></td></tr>
+              <tr><td>13:00</td><td><input type="text" id="task-13" placeholder="Enter task"></td><td><input type="checkbox" class="task-done" data-task="13"></td></tr>
+              <tr><td>14:00</td><td><input type="text" id="task-14" placeholder="Enter task"></td><td><input type="checkbox" class="task-done" data-task="14"></td></tr>
+              <tr><td>15:00</td><td><input type="text" id="task-15" placeholder="Enter task"></td><td><input type="checkbox" class="task-done" data-task="15"></td></tr>
+              <tr><td>16:00</td><td><input type="text" id="task-16" placeholder="Enter task"></td><td><input type="checkbox" class="task-done" data-task="16"></td></tr>
+              <tr><td>17:00</td><td><input type="text" id="task-17" placeholder="Enter task"></td><td><input type="checkbox" class="task-done" data-task="17"></td></tr>
+              <tr><td>18:00</td><td><input type="text" id="task-18" placeholder="Enter task"></td><td><input type="checkbox" class="task-done" data-task="18"></td></tr>
+              <tr><td>19:00</td><td><input type="text" id="task-19" placeholder="Enter task"></td><td><input type="checkbox" class="task-done" data-task="19"></td></tr>
+              <tr><td>20:00</td><td><input type="text" id="task-20" placeholder="Enter task"></td><td><input type="checkbox" class="task-done" data-task="20"></td></tr>
+              <tr><td>21:00</td><td><input type="text" id="task-21" placeholder="Enter task"></td><td><input type="checkbox" class="task-done" data-task="21"></td></tr>
+              <tr><td>22:00</td><td><input type="text" id="task-22" placeholder="Enter task"></td><td><input type="checkbox" class="task-done" data-task="22"></td></tr>
+              <tr><td>23:00</td><td><input type="text" id="task-23" placeholder="Enter task"></td><td><input type="checkbox" class="task-done" data-task="23"></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="summary">
+      <h2 id="summary-title">SUMMARY</h2>
+      <ul id="summary-list"></ul>
+    </div>
+
+    <button class="print-btn" onclick="window.print()">Print</button>
+
+    <div class="lang-switch">
+      <select id="language-select" onchange="switchLanguage()">
+        <option value="en">English</option>
+        <option value="kh">ភាសាខ្មែរ</option>
+      </select>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
